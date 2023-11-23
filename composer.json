@@ -1,0 +1,5 @@
+{
+    "require": {
+        "virusphp/bridging-bpjs": "^2.1"
+    }
+}
