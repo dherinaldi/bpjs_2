@@ -40,8 +40,6 @@ class ServiceReferensi
        $endpoint = "Peserta/nokartu/{$noka}/tglSEP/{$tanggal}";
        $hasil = $this->bridging->getRequest($endpoint);
         return $hasil;
-
-
     }
 
     public function postAntrian($data)
