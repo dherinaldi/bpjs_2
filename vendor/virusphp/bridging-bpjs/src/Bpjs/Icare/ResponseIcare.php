@@ -1,13 +1,13 @@
 <?php
 
-namespace Bpjs\Bridging\Vclaim;
+namespace Bpjs\Bridging\Icare;
 
 use LZCompressor\LZString;
 use Bpjs\Bridging\GenerateBpjs;
 
-class ResponseVclaim
+class ResponseIcare
 {
-    public function responseVclaim($response, $key)
+    public function responseIcare($response, $key)
     {
         $result = json_decode($response);
 		if ($result->metaData->code == "200" && is_string($result->response)) {

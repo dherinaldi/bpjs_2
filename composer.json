@@ -1,5 +1,6 @@
 {
     "require": {
-        "virusphp/bridging-bpjs": "^2.1"
+        "virusphp/bridging-bpjs": "^2.1",
+        "virusphp/bridging-satusehat": "dev-main"
     }
 }

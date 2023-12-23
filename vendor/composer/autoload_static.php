@@ -13,6 +13,10 @@ class ComposerStaticInit28f2114a0e4e5e5c082d92191bbde18b
     );
 
     public static $prefixLengthsPsr4 = array (
+        'V' => 
+        array (
+            'Virusphp\\BridgingSatusehat\\' => 27,
+        ),
         'S' => 
         array (
             'Symfony\\Polyfill\\Php80\\' => 23,
@@ -46,6 +50,10 @@ class ComposerStaticInit28f2114a0e4e5e5c082d92191bbde18b
     );
 
     public static $prefixDirsPsr4 = array (
+        'Virusphp\\BridgingSatusehat\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/virusphp/bridging-satusehat/src',
+        ),
         'Symfony\\Polyfill\\Php80\\' => 
         array (
             0 => __DIR__ . '/..' . '/symfony/polyfill-php80',

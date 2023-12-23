@@ -3,6 +3,8 @@ use Bpjs\Bridging\Vclaim\BridgeVclaim;
 use Bpjs\Bridging\Antrol\BridgeAntrol;
 use Symfony\Component\HttpFoundation\Request;
 
+use Virusphp\BridgingSatusehat\Bridge\BridgeBase;
+
 require "vendor/autoload.php";
 
 class ServiceReferensi
@@ -13,6 +15,7 @@ class ServiceReferensi
     public function __construct(){
         $this->bridging = new BridgeVclaim;
         $this->antrol = new BridgeAntrol;
+        $this->bridging_base = new BridgeBase();
     }
 
     public function diagnosa($kode){
@@ -65,6 +68,24 @@ class ServiceReferensi
 	{
 		$endpoint = "SEP/{$nosep}";
 		return $this->bridging->getRequest($endpoint);
+	}
+
+    public function getPatient($nik)
+	{
+		$endpoint = 'Practitioner?identifier=https://fhir.kemkes.go.id/id/nik|'. $nik;
+		return $this->bridging_base->getRequest($endpoint);
+	}
+
+    public function createEncounter($data)
+	{
+		$endpoint = 'Encounter';
+		return $this->bridging_base->postRequest($endpoint, $data);
+	}
+
+    public function createMedication($data)
+	{
+		$endpoint = 'Medication';
+		return $this->bridging_base->postRequest($endpoint, $data);
 	}
 
 

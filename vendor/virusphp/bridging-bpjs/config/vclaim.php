@@ -1,4 +1,5 @@
 <?php
+
 return [
 	'api' => [
 		'endpoint'  => env('API_BPJS_VCLAIM','ENDPOINT-KAMU'),
