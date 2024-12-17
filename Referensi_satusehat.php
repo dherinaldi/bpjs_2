@@ -1,5 +1,4 @@
 <?php
-
 require "ServiceReferensi.php";
 class Referensi
 {
@@ -120,30 +119,30 @@ $data_medication = '{
     },
     "identifier": [
         {
-            "system": "http://sys-ids.kemkes.go.id/medication/10000004",
             "use": "official",
-            "value": "123456789"
+            "value": "1030102012312220172",
+            "system": "https://sys-ids.kemkes.go.id/medication/100026255"
         }
     ],
     "code": {
         "coding": [
             {
+                "code": "93000483",
                 "system": "http://sys-ids.kemkes.go.id/kfa",
-                "code": "93001019",
-                "display": "Obat Anti Tuberculosis / Rifampicin 150 mg / Isoniazid 75 mg / Pyrazinamide 400 mg / Ethambutol 275 mg Kaplet Salut Selaput (KIMIA FARMA)"
+                "display": "AMLODIPINE TAB 10 MG"
             }
         ]
     },
     "status": "active",
     "manufacturer": {
-        "reference": "Organization/900001"
+        "reference": "Organization/100026255"
     },
     "form": {
         "coding": [
             {
                 "system": "http://terminology.kemkes.go.id/CodeSystem/medication-form",
-                "code": "BS023",
-                "display": "Kaplet Salut Selaput"
+                "code": "BS066",
+                "display": "Tablet"
             }
         ]
     },
@@ -153,87 +152,15 @@ $data_medication = '{
                 "coding": [
                     {
                         "system": "http://sys-ids.kemkes.go.id/kfa",
-                        "code": "91000330",
-                        "display": "Rifampin"
+                        "code": "91000397",
+                        "display": "AMLODIPINE"
                     }
                 ]
             },
             "isActive": true,
             "strength": {
                 "numerator": {
-                    "value": 150,
-                    "system": "http://unitsofmeasure.org",
-                    "code": "mg"
-                },
-                "denominator": {
-                    "value": 1,
-                    "system": "http://terminology.hl7.org/CodeSystem/v3-orderableDrugForm",
-                    "code": "TAB"
-                }
-            }
-        },
-        {
-            "itemCodeableConcept": {
-                "coding": [
-                    {
-                        "system": "http://sys-ids.kemkes.go.id/kfa",
-                        "code": "91000328",
-                        "display": "Isoniazid"
-                    }
-                ]
-            },
-            "isActive": true,
-            "strength": {
-                "numerator": {
-                    "value": 75,
-                    "system": "http://unitsofmeasure.org",
-                    "code": "mg"
-                },
-                "denominator": {
-                    "value": 1,
-                    "system": "http://terminology.hl7.org/CodeSystem/v3-orderableDrugForm",
-                    "code": "TAB"
-                }
-            }
-        },
-        {
-            "itemCodeableConcept": {
-                "coding": [
-                    {
-                        "system": "http://sys-ids.kemkes.go.id/kfa",
-                        "code": "91000329",
-                        "display": "Pyrazinamide"
-                    }
-                ]
-            },
-            "isActive": true,
-            "strength": {
-                "numerator": {
-                    "value": 400,
-                    "system": "http://unitsofmeasure.org",
-                    "code": "mg"
-                },
-                "denominator": {
-                    "value": 1,
-                    "system": "http://terminology.hl7.org/CodeSystem/v3-orderableDrugForm",
-                    "code": "TAB"
-                }
-            }
-        },
-        {
-            "itemCodeableConcept": {
-                "coding": [
-                    {
-                        "system": "http://sys-ids.kemkes.go.id/kfa",
-                        "code": "91000288",
-                        "display": "Ethambutol"
-                    }
-                ]
-            },
-            "isActive": true,
-            "strength": {
-                "numerator": {
-                    "value": 275,
+                    "value": 10,
                     "system": "http://unitsofmeasure.org",
                     "code": "mg"
                 },
@@ -259,7 +186,7 @@ $data_medication = '{
             }
         }
     ]
- }';
+}';
 
 echo "<p>";
 echo ($referensi->createEncounter($data));

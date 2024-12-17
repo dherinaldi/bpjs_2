@@ -1,6 +1,10 @@
 <?php
 
-require "ServiceReferensi.php";
+//require "../ServiceReferensi.php";
+
+//require __DIR__ . "../ServiceReferensi.php";
+require __DIR__ . DIRECTORY_SEPARATOR . "ServiceReferensi.php";
+
 class Referensi
 {
     protected $serviceReferensi;
@@ -54,9 +58,11 @@ class Referensi
 
 }
 
-$referensi = new Referensi;
+//$referensi = new Referensi;
 
-$param = isset($_REQUEST['param']) ? $_REQUEST['param'] : isset($_REQUEST['param']);
+//print_r($referensi);
+
+/* $param = isset($_REQUEST['param']) ? $_REQUEST['param'] : isset($_REQUEST['param']);
 $data = isset($_REQUEST['data']) ? $_REQUEST['data'] : isset($_REQUEST['data']);
 #echo 'data='.$data;
 if ($param == 'diag') {
@@ -86,4 +92,4 @@ if ($param == 'diag') {
 
 } else {
     echo "data kosong";
-}
+} */

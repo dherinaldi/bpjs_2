@@ -8,7 +8,9 @@ use Virusphp\BridgingSatusehat\Bridge\BridgeBase;
 use Bpjs\Bridging\Icare\BridgeIcare;
 use Illuminate\Http\Request as Request_icare;
 
-require "vendor/autoload.php";
+require "../vendor/autoload.php";
+//require __DIR__ . "/vendor/autoload.php";
+
 
 class ServiceReferensi
 {
@@ -20,8 +22,6 @@ class ServiceReferensi
         $this->antrol = new BridgeAntrol;
         $this->bridging_base = new BridgeBase();
         $this->bridging_icare = new BridgeIcare();
-
-		
     }
 
     public function diagnosa($kode){
@@ -129,5 +129,9 @@ class ServiceReferensi
 	}
 
 }
+
+$servicereferensi = new ServiceReferensi;
+
+print_r($servicereferensi);
 
 ?>
